@@ -28,7 +28,7 @@ import java.util.*;
 public class DeviceServiceImpl extends BaseServiceImpl<DeviceMapper, Device> implements DeviceService {
 
     private final DeviceMapper deviceMapper;
-    private final IGenerator generator;
+    private final IGenerator generator;//sss
 
     @Override
     //@Cacheable
