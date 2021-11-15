@@ -61,10 +61,12 @@ public class ProjectsServiceImpl extends BaseServiceImpl<ProjectsMapper, Project
     @Override
     //@Cacheable
     public List<Projects> queryAll(ProjectsQueryCriteria criteria){
+
+        //criteria.setProjectIds("001");
         List<Projects> projectsList = baseMapper.selectList(QueryHelpPlus.getPredicate(Projects.class, criteria));
-        for (Projects project : projectsList) {
-            project.setProvince(provinceService.getById(project.getProvinceId()));
-        }
+//        for (Projects project : projectsList) {
+//            project.setProvince(provinceService.getById(project.getProvinceId()));
+//        }  暂时不写行政区域
         return projectsList;
     }
 

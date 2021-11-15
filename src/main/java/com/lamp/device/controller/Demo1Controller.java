@@ -11,6 +11,6 @@ public class Demo1Controller {
     @RequestMapping("hello_world")
     @ResponseBody
     public String helloWorld(){
-        return "hello world";
+        return "http://localhost:8081/demo1/hello_world";
     }
 }
